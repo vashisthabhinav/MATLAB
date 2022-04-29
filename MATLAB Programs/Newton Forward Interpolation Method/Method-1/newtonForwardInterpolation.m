@@ -1,6 +1,11 @@
+%% Newton's Forward Interpolation Method
+% Submitted by- Abhinav Vashisth
+% Roll No.- 20bch010
+
 X = input('Enter list of abscissas: ');
 Y = input('Enter list of ordinates: ');
 p0 = input('Enter point of approximations: ');
+
 n = length(X);
 h = X(2)-X(1);
 F = zeros(n,n);
@@ -23,8 +28,3 @@ C
 
 A = polyval(C,p0);
 fprintf('Approximate value at given data point is: %.4f\n',A);
-x = linspace(X(1),X(n),100);
-y = polyval(C,x);
-plot(x,y,'r')
-hold on
-plot(X,Y,'b')
